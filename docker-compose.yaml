@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  gameserver:
+    build:
+      context: .
+      dockerfile: 'Dockerfile'
+    image: poc-unity-udp-multiplayer:dev
+    container_name: poc-unity-udp-multiplayer
+    restart: always
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server/:/go/src
+    command: 'CompileDaemon --build="go build -o ./server-build/server"
+      --command=./server-build/server'
+             

@@ -1,0 +1,8 @@
+
+TODOs:
+    - get go server run-able
+    - add initial unity game project files
+    - add udp to server
+    - add udp to game
+    - poc udp messages client->server
+    - poc udp messages server->client
